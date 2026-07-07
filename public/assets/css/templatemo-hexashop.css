@@ -23,16 +23,16 @@ Table of contents
 12. portfolio
 
 --------------------------------------------- */
-/* 
+/*
 ---------------------------------------------
 font & reset css
---------------------------------------------- 
+---------------------------------------------
 */
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
-/* 
+/*
 ---------------------------------------------
 reset
---------------------------------------------- 
+---------------------------------------------
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -108,10 +108,10 @@ p {
   color: #2a2a2a;
 }
 
-/* 
+/*
 ---------------------------------------------
 global styles
---------------------------------------------- 
+---------------------------------------------
 */
 html,
 body {
@@ -120,12 +120,12 @@ body {
 }
 
 ::selection {
-  background: #2a2a2a;
+  background: #36220b;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #2a2a2a;
+  background: #36220b;
   color: #fff;
 }
 
@@ -201,10 +201,10 @@ body {
 
 
 
-/* 
+/*
 ---------------------------------------------
 header
---------------------------------------------- 
+---------------------------------------------
 */
 
 .background-header {
@@ -224,11 +224,11 @@ header
 }
 
 .background-header .main-nav .nav li:hover a {
-  color: #2a2a2a!important;
+  color: #36220b!important;
 }
 
 .background-header .nav li a.active {
-  color: #2a2a2a!important;
+  color: #36220b!important;
 }
 
 .header-area {
@@ -343,7 +343,7 @@ header
 }
 
 .background-header .main-nav .nav li.submenu:after {
-  color: #2a2a2a;
+  color: #36220b;
 }
 
 .header-area .main-nav .nav li.submenu ul {
@@ -644,10 +644,10 @@ header
 }
 
 
-/* 
+/*
 ---------------------------------------------
 banner
---------------------------------------------- 
+---------------------------------------------
 */
 
 .main-banner {
@@ -767,49 +767,49 @@ Men
 ---------------------------------------------
 */
 
-#men {
+.product-section {
   padding-top: 90px;
   padding-bottom: 90px;
   border-bottom: 3px dotted #eee;
 }
 
-#men .section-heading {
+.product-section .section-heading {
   margin-bottom: 60px;
 }
 
-#men .item .down-content {
+.product-section .item .down-content {
   padding-top: 30px;
   position: relative;
   z-index: 3;
   background-color: #fff;
 }
 
-#men .item .down-content h4 {
+.product-section .item .down-content h4 {
   font-size: 22px;
   color: #2a2a2a;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
-#men .item .down-content span {
+.product-section .item .down-content span {
   font-size: 18px;
   color: #a1a1a1;
   font-weight: 500;
   display: block;
 }
 
-#men .item .down-content ul.stars {
+.product-section .item .down-content ul.stars {
   position: absolute;
   right: 0;
   top: 30px;
 }
 
-#men .item .down-content ul.stars li {
+.product-section .item .down-content ul.stars li {
   display: inline;
   font-size: 13px;
 }
 
-#men .item .thumb .hover-content {
+.product-section .item .thumb .hover-content {
   position: absolute;
   z-index: 2;
   text-align: center;
@@ -820,22 +820,22 @@ Men
   transition: all .5s;
 }
 
-#men .item .thumb:hover .hover-content {
+.product-section .item .thumb:hover .hover-content {
   bottom: 30px;
   opacity: 1;
   visibility: visible;
 }
 
-#men .item .thumb {
+.product-section .item .thumb {
   position: relative;
 }
 
-#men .item .thumb .hover-content ul li {
+.product-section .item .thumb .hover-content ul li {
   display: inline;
   margin: 0px 10px;
 }
 
-#men .item .thumb .hover-content ul li a {
+.product-section .item .thumb .hover-content ul li a {
   width: 50px;
   height: 50px;
   text-align: center;
@@ -846,7 +846,7 @@ Men
 }
 
 
-#men .owl-nav {
+.product-section .owl-nav {
   text-align: center;
   position: absolute;
   width: 100%;
@@ -854,22 +854,22 @@ Men
   transform: translateY(-25px);
 }
 
-#men .owl-dots {
+.product-section .owl-dots {
   display: none;
 }
-    
-#men .owl-nav .owl-prev{
+
+.product-section .owl-nav .owl-prev{
   position: absolute;
   left: -80px;
   outline: none;
 }
 
-#men .owl-nav .owl-prev span,
-#men .owl-nav .owl-next span {
+.product-section .owl-nav .owl-prev span,
+.product-section .owl-nav .owl-next span {
   opacity: 0;
 }
 
-#men .owl-nav .owl-prev:before {
+.product-section .owl-nav .owl-prev:before {
   display: inline-block;
   font-family: 'FontAwesome';
   color: #2a2a2a;
@@ -883,31 +883,31 @@ Men
   border :1px solid #2a2a2a;
 }
 
-#men .owl-nav .owl-prev {
+.product-section .owl-nav .owl-prev {
   opacity: 0.75;
   transition: all .5s;
 }
 
-#men .owl-nav .owl-prev:hover {
+.product-section .owl-nav .owl-prev:hover {
   opacity: 1;
 }
 
-#men .owl-nav .owl-next {
+.product-section .owl-nav .owl-next {
   opacity: 0.75;
   transition: all .5s;
 }
 
-#men .owl-nav .owl-next:hover {
+.product-section .owl-nav .owl-next:hover {
   opacity: 1;
 }
 
-#men .owl-nav .owl-next{
+.product-section .owl-nav .owl-next{
   outline: none;
   position: absolute;
   right: -85px;
 }
 
-#men .owl-nav .owl-next:before {
+.product-section .owl-nav .owl-next:before {
   display: inline-block;
   font-family: 'FontAwesome';
   color: #2a2a2a;
@@ -928,49 +928,49 @@ Women
 ---------------------------------------------
 */
 
-#women {
+.product-section {
   padding-top: 90px;
   padding-bottom: 90px;
   border-bottom: 3px dotted #eee;
 }
 
-#women .section-heading {
+.product-section .section-heading {
   margin-bottom: 60px;
 }
 
-#women .item .down-content {
+.product-section .item .down-content {
   padding-top: 30px;
   position: relative;
   z-index: 3;
   background-color: #fff;
 }
 
-#women .item .down-content h4 {
+.product-section .item .down-content h4 {
   font-size: 22px;
   color: #2a2a2a;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
-#women .item .down-content span {
+.product-section .item .down-content span {
   font-size: 18px;
   color: #a1a1a1;
   font-weight: 500;
   display: block;
 }
 
-#women .item .down-content ul.stars {
+.product-section .item .down-content ul.stars {
   position: absolute;
   right: 0;
   top: 30px;
 }
 
-#women .item .down-content ul.stars li {
+.product-section .item .down-content ul.stars li {
   display: inline;
   font-size: 13px;
 }
 
-#women .item .thumb .hover-content {
+.product-section .item .thumb .hover-content {
   position: absolute;
   z-index: 2;
   text-align: center;
@@ -981,22 +981,22 @@ Women
   transition: all .5s;
 }
 
-#women .item .thumb:hover .hover-content {
+.product-section .item .thumb:hover .hover-content {
   bottom: 30px;
   opacity: 1;
   visibility: visible;
 }
 
-#women .item .thumb {
+.product-section .item .thumb {
   position: relative;
 }
 
-#women .item .thumb .hover-content ul li {
+.product-section .item .thumb .hover-content ul li {
   display: inline;
   margin: 0px 10px;
 }
 
-#women .item .thumb .hover-content ul li a {
+.product-section .item .thumb .hover-content ul li a {
   width: 50px;
   height: 50px;
   text-align: center;
@@ -1007,7 +1007,7 @@ Women
 }
 
 
-#women .owl-nav {
+.product-section .owl-nav {
   text-align: center;
   position: absolute;
   width: 100%;
@@ -1015,22 +1015,22 @@ Women
   transform: translateY(-25px);
 }
 
-#women .owl-dots {
+.product-section .owl-dots {
   display: none;
 }
-    
-#women .owl-nav .owl-prev{
+
+.product-section .owl-nav .owl-prev{
   position: absolute;
   left: -80px;
   outline: none;
 }
 
-#women .owl-nav .owl-prev span,
-#women .owl-nav .owl-next span {
+.product-section .owl-nav .owl-prev span,
+.product-section .owl-nav .owl-next span {
   opacity: 0;
 }
 
-#women .owl-nav .owl-prev:before {
+.product-section .owl-nav .owl-prev:before {
   display: inline-block;
   font-family: 'FontAwesome';
   color: #2a2a2a;
@@ -1044,31 +1044,31 @@ Women
   border :1px solid #2a2a2a;
 }
 
-#women .owl-nav .owl-prev {
+.product-section .owl-nav .owl-prev {
   opacity: 0.75;
   transition: all .5s;
 }
 
-#women .owl-nav .owl-prev:hover {
+.product-section .owl-nav .owl-prev:hover {
   opacity: 1;
 }
 
-#women .owl-nav .owl-next {
+.product-section .owl-nav .owl-next {
   opacity: 0.75;
   transition: all .5s;
 }
 
-#women .owl-nav .owl-next:hover {
+.product-section .owl-nav .owl-next:hover {
   opacity: 1;
 }
 
-#women .owl-nav .owl-next{
+.product-section .owl-nav .owl-next{
   outline: none;
   position: absolute;
   right: -85px;
 }
 
-#women .owl-nav .owl-next:before {
+.product-section .owl-nav .owl-next:before {
   display: inline-block;
   font-family: 'FontAwesome';
   color: #2a2a2a;
@@ -1088,49 +1088,49 @@ Kids
 ---------------------------------------------
 */
 
-#kids {
+.product-section {
   padding-top: 90px;
   padding-bottom: 90px;
   border-bottom: 3px dotted #eee;
 }
 
-#kids .section-heading {
+.product-section .section-heading {
   margin-bottom: 60px;
 }
 
-#kids .item .down-content {
+.product-section .item .down-content {
   padding-top: 30px;
   position: relative;
   z-index: 3;
   background-color: #fff;
 }
 
-#kids .item .down-content h4 {
+.product-section .item .down-content h4 {
   font-size: 22px;
   color: #2a2a2a;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
-#kids .item .down-content span {
+.product-section .item .down-content span {
   font-size: 18px;
   color: #a1a1a1;
   font-weight: 500;
   display: block;
 }
 
-#kids .item .down-content ul.stars {
+.product-section .item .down-content ul.stars {
   position: absolute;
   right: 0;
   top: 30px;
 }
 
-#kids .item .down-content ul.stars li {
+.product-section .item .down-content ul.stars li {
   display: inline;
   font-size: 13px;
 }
 
-#kids .item .thumb .hover-content {
+.product-section .item .thumb .hover-content {
   position: absolute;
   z-index: 2;
   text-align: center;
@@ -1141,22 +1141,22 @@ Kids
   transition: all .5s;
 }
 
-#kids .item .thumb:hover .hover-content {
+.product-section .item .thumb:hover .hover-content {
   bottom: 30px;
   opacity: 1;
   visibility: visible;
 }
 
-#kids .item .thumb {
+.product-section .item .thumb {
   position: relative;
 }
 
-#kids .item .thumb .hover-content ul li {
+.product-section .item .thumb .hover-content ul li {
   display: inline;
   margin: 0px 10px;
 }
 
-#kids .item .thumb .hover-content ul li a {
+.product-section .item .thumb .hover-content ul li a {
   width: 50px;
   height: 50px;
   text-align: center;
@@ -1167,7 +1167,7 @@ Kids
 }
 
 
-#kids .owl-nav {
+.product-section .owl-nav {
   text-align: center;
   position: absolute;
   width: 100%;
@@ -1175,22 +1175,22 @@ Kids
   transform: translateY(-25px);
 }
 
-#kids .owl-dots {
+.product-section .owl-dots {
   display: none;
 }
-    
-#kids .owl-nav .owl-prev{
+
+.product-section .owl-nav .owl-prev{
   position: absolute;
   left: -80px;
   outline: none;
 }
 
-#kids .owl-nav .owl-prev span,
-#kids .owl-nav .owl-next span {
+.product-section .owl-nav .owl-prev span,
+.product-section .owl-nav .owl-next span {
   opacity: 0;
 }
 
-#kids .owl-nav .owl-prev:before {
+.product-section .owl-nav .owl-prev:before {
   display: inline-block;
   font-family: 'FontAwesome';
   color: #2a2a2a;
@@ -1204,31 +1204,31 @@ Kids
   border :1px solid #2a2a2a;
 }
 
-#kids .owl-nav .owl-prev {
+.product-section .owl-nav .owl-prev {
   opacity: 0.75;
   transition: all .5s;
 }
 
-#kids .owl-nav .owl-prev:hover {
+.product-section .owl-nav .owl-prev:hover {
   opacity: 1;
 }
 
-#kids .owl-nav .owl-next {
+.product-section .owl-nav .owl-next {
   opacity: 0.75;
   transition: all .5s;
 }
 
-#kids .owl-nav .owl-next:hover {
+.product-section .owl-nav .owl-next:hover {
   opacity: 1;
 }
 
-#kids .owl-nav .owl-next{
+.product-section .owl-nav .owl-next{
   outline: none;
   position: absolute;
   right: -85px;
 }
 
-#kids .owl-nav .owl-next:before {
+.product-section .owl-nav .owl-next:before {
   display: inline-block;
   font-family: 'FontAwesome';
   color: #2a2a2a;
@@ -1347,10 +1347,10 @@ Explore
   font-weight: 500;
 }
 
-/* 
+/*
 ---------------------------------------------
 Social
---------------------------------------------- 
+---------------------------------------------
 */
 
 #social {
@@ -1414,10 +1414,10 @@ Social
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Subscribe
---------------------------------------------- 
+---------------------------------------------
 */
 
 .subscribe {
@@ -1493,16 +1493,16 @@ Subscribe
 }
 
 
-/* 
+/*
 ---------------------------------------------
 footer
---------------------------------------------- 
+---------------------------------------------
 */
 
 footer {
   margin-top: 60px;
   padding: 60px 0px 30px 0px;
-  background-color: #2a2a2a;
+  background-color: #36220b;
 }
 
 footer .logo {
@@ -1567,10 +1567,10 @@ footer .under-footer a:hover {
 }
 
 
-/* 
+/*
 ---------------------------------------------
 Products Page
---------------------------------------------- 
+---------------------------------------------
 */
 
 .page-heading {
@@ -1713,16 +1713,16 @@ Products Page
 
 #products .pagination ul li a:hover,
 #products .pagination ul li.active a {
-  background-color: #2a2a2a;
+  background-color: #36220b;
   color: #fff;
 }
 
 
 
-/* 
+/*
 ---------------------------------------------
 Single Product Page
---------------------------------------------- 
+---------------------------------------------
 */
 
 #product {
@@ -1853,7 +1853,7 @@ Single Product Page
 
 .quantity {
   display: inline-block; }
- 
+
  .quantity .input-text.qty {
   width: 35px;
   height: 39px;
@@ -1862,20 +1862,20 @@ Single Product Page
   background-color: transparent;
   border: 1px solid #efefef;
  }
- 
+
  .quantity.buttons_added {
   text-align: left;
   position: relative;
   white-space: nowrap;
   vertical-align: top; }
- 
+
  .quantity.buttons_added input {
   display: inline-block;
   margin: 0;
   vertical-align: top;
   box-shadow: none;
  }
- 
+
  .quantity.buttons_added .minus,
  .quantity.buttons_added .plus {
   padding: 7px 10px 8px;
@@ -1883,33 +1883,33 @@ Single Product Page
   background-color: #ffffff;
   border: 1px solid #efefef;
   cursor:pointer;}
- 
+
  .quantity.buttons_added .minus {
   border-right: 0; }
- 
+
  .quantity.buttons_added .plus {
   border-left: 0; }
- 
+
  .quantity.buttons_added .minus:hover,
  .quantity.buttons_added .plus:hover {
   background: #eeeeee; }
- 
+
  .quantity input::-webkit-outer-spin-button,
  .quantity input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   margin: 0; }
-  
+
   .quantity.buttons_added .minus:focus,
  .quantity.buttons_added .plus:focus {
   outline: none; }
 
 
 
-/* 
+/*
 ---------------------------------------------
 About Us Page
---------------------------------------------- 
+---------------------------------------------
 */
 
 .about-page-heading {
@@ -2069,7 +2069,7 @@ About Us Page
 }
 
 .our-team .team-item .thumb .hover-effect .inner-content ul li a:hover {
-  background-color: #2a2a2a;
+  background-color: #36220b;
   color: #fff;
 }
 
@@ -2133,10 +2133,10 @@ About Us Page
 
 
 
-/* 
+/*
 ---------------------------------------------
 contact Us Page
---------------------------------------------- 
+---------------------------------------------
 */
 
 .contact-us {
@@ -2201,7 +2201,7 @@ contact Us Page
   display: inline-block;
   text-align: center;
   line-height: 44px;
-  background-color: #2a2a2a;
+  background-color: #36220b;
   box-shadow: none;
   border: 1px solid transparent;
   color: #fff;
@@ -2215,10 +2215,10 @@ contact Us Page
 }
 
 
-/* 
+/*
 ---------------------------------------------
 responsive
---------------------------------------------- 
+---------------------------------------------
 */
 
 @media (max-width: 1200px) {
@@ -2301,7 +2301,7 @@ responsive
 
 #preloader {
   overflow: hidden;
-  background-color: #2a2a2a;
+  background-color: #36220b;
   left: 0;
   right: 0;
   top: 0;

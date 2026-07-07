@@ -20,13 +20,21 @@
     <link rel="stylesheet" href="{{ asset('assets/css/templatemo-hexashop.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/owl-carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/lightbox.css') }}">
-    <!--
 
-TemplateMo 571 Hexashop
+    @yield('style')
 
-https://templatemo.com/tm-571-hexashop
+    <style>
+        .map-responsive {
+            overflow: hidden;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
 
--->
+        .map-responsive iframe {
+            width: 100%;
+            height: 220px;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,7 +57,40 @@ https://templatemo.com/tm-571-hexashop
     @yield('content')
 
     <!-- ***** Footer Start ***** -->
-    @yield('footer')
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-6 text-center">
+
+                    <div class="logo mb-4">
+                        <img src="{{ asset('assets/images/logo.png') }}" alt="Logo">
+                    </div>
+
+                    <p class="mb-3" style="color: white;">
+                        <i class="fa fa-map-marker"></i>
+                        Jl. Senggoro, Gg. Anugrah, ST/RW.004/004, Senggoro, Bengkalis
+                    </p>
+
+                    <div class="map-responsive">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1994.2382394012652!2d102.14064936799058!3d1.4860172775940395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1783414099946!5m2!1sen!2sid" width="100%"
+                            height="220" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="under-footer">
+                        <p>
+                            © {{ date('Y') }} Pratama Florist Bengkalis. All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
     <!-- ***** Footer End ***** -->
 
     <!-- jQuery -->
