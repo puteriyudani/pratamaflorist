@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Pratama Florist</title>
+    <title>Login - Pratama Florist Bengkalis</title>
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -14,7 +14,7 @@
 
     <style>
         body {
-            background: linear-gradient(135deg, #4CAF50, #81C784);
+            background: linear-gradient(135deg, #36220b, #c2a17c);
             min-height: 100vh;
         }
 
@@ -26,7 +26,7 @@
         }
 
         .login-left {
-            background: #2E7D32;
+            background: #36220b;
             color: white;
             padding: 50px;
         }

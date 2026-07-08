@@ -1,89 +1,6 @@
-<!DOCTYPE html>
-<html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produk - Pratama Florist</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <style>
-        body {
-            background: #f4f6f9;
-        }
-
-        .sidebar {
-            width: 260px;
-            height: 100vh;
-            position: fixed;
-            background: #198754;
-            color: white;
-        }
-
-        .sidebar a {
-            color: white;
-            text-decoration: none;
-            display: block;
-            padding: 14px 20px;
-            transition: .3s;
-        }
-
-        .sidebar a:hover {
-            background: rgba(255, 255, 255, .15);
-        }
-
-        .sidebar a.active {
-            background: rgba(255, 255, 255, .2);
-            border-left: 4px solid #fff;
-            font-weight: 600;
-        }
-
-        .sidebar a.active i {
-            color: #fff;
-        }
-
-        .content {
-            margin-left: 260px;
-        }
-
-        .navbar {
-            box-shadow: 0 3px 8px rgba(0, 0, 0, .1);
-        }
-
-        .card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
-        }
-
-        .icon-box {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 28px;
-            color: white;
-        }
-
-        .table thead {
-            background: #198754;
-            color: white;
-        }
-
-        .dropdown-item.text-danger:hover {
-            background-color: #f8d7da;
-            color: #dc3545 !important;
-        }
-    </style>
-
-</head>
-
-<body>
-
+@extends('layouts.backend')
+@section('title', 'Tambah Produk - Pratama Florist Bengkalis')
+@section('sidebar')
     <div class="sidebar">
 
         <h4 class="text-center py-4">🌸 Pratama Florist</h4>
@@ -100,8 +17,8 @@
         </a>
 
     </div>
-
-
+@endsection
+@section('content')
     <div class="content">
 
         <nav class="navbar navbar-expand-lg bg-white">
@@ -143,7 +60,7 @@
 
             <div class="card shadow-sm">
 
-                <div class="card-header bg-success text-white">
+                <div class="card-header text-white">
 
                     <h5 class="mb-0">
                         <i class="bi bi-plus-circle"></i>
@@ -212,8 +129,7 @@
 
                                 <label class="form-label">Kategori</label>
 
-                                <select name="id_kategori"
-                                    class="form-select @error('id_kategori') is-invalid @enderror">
+                                <select name="id_kategori" class="form-select @error('id_kategori') is-invalid @enderror">
 
                                     <option value="">-- Pilih Kategori --</option>
 
@@ -250,8 +166,7 @@
 
                                 <label class="form-label">Foto Produk</label>
 
-                                <input type="file" name="image" class="form-control"
-                                    onchange="previewImage(event)">
+                                <input type="file" name="image" class="form-control" onchange="previewImage(event)">
 
                             </div>
 
@@ -292,9 +207,4 @@
         </script>
 
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
-</html>
+@endsection

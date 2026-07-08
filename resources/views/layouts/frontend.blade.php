@@ -99,6 +99,7 @@
     <!-- Bootstrap -->
     <script src="{{ asset('assets/js/popper.js') }}"></script>
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugins -->
     <script src="{{ asset('assets/js/owl-carousel.js') }}"></script>

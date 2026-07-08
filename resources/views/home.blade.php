@@ -17,6 +17,97 @@
             font-size: 20px;
             font-weight: 700;
         }
+
+        .main-banner {
+            position: relative;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+        }
+
+        .banner-content {
+            position: absolute;
+            top: 50%;
+            left: 8%;
+            transform: translateY(-50%);
+            color: #fff;
+            max-width: 500px;
+        }
+
+        .banner-content h1 {
+            font-size: 52px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .banner-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn-shop {
+            display: inline-block;
+            padding: 12px 35px;
+            background: #b68a60;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 40px;
+            transition: .3s;
+        }
+
+        .btn-shop:hover {
+            background: #9c744d;
+            color: #fff;
+        }
+
+        /* tombol kiri bawah */
+
+        .banner-navigation {
+            position: absolute;
+            left: 60px;
+            bottom: 35px;
+            z-index: 20;
+            display: flex;
+            gap: 15px;
+        }
+
+        .banner-arrow {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, .6);
+            background: rgba(255, 255, 255, .15);
+            color: #fff;
+            font-size: 20px;
+            transition: .3s;
+        }
+
+        .banner-arrow:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        /* indikator kanan bawah */
+
+        .custom-indicator {
+            justify-content: flex-end;
+            margin-right: 60px;
+            margin-bottom: 40px;
+        }
+
+        .custom-indicator button {
+            width: 10px !important;
+            height: 10px !important;
+            border-radius: 50%;
+            margin: 0 5px !important;
+        }
+
+        .custom-indicator .active {
+            background: #fff;
+        }
     </style>
 @endsection
 @section('header')
@@ -60,114 +151,52 @@
 @endsection
 @section('content')
     <!-- ***** Main Banner Area Start ***** -->
-    <div class="main-banner" id="top">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="left-content">
-                        <div class="thumb">
-                            <div class="inner-content">
-                                <h4>We Are Hexashop</h4>
-                                <span>Awesome, clean &amp; creative HTML5 Template</span>
-                                <div class="main-border-button">
-                                    <a href="#">Purchase Now!</a>
-                                </div>
-                            </div>
-                            <img src="assets/images/left-banner-image.jpg" alt="">
-                        </div>
-                    </div>
+    <div class="main-banner">
+        <div id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+
+            <div class="carousel-inner">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="assets/images/banner1.jpg" class="d-block w-100" alt="">
                 </div>
-                <div class="col-lg-6">
-                    <div class="right-content">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="right-first-image">
-                                    <div class="thumb">
-                                        <div class="inner-content">
-                                            <h4>Women</h4>
-                                            <span>Best Clothes For Women</span>
-                                        </div>
-                                        <div class="hover-content">
-                                            <div class="inner">
-                                                <h4>Women</h4>
-                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.
-                                                </p>
-                                                <div class="main-border-button">
-                                                    <a href="#">Discover More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <img src="assets/images/baner-right-image-01.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="right-first-image">
-                                    <div class="thumb">
-                                        <div class="inner-content">
-                                            <h4>Men</h4>
-                                            <span>Best Clothes For Men</span>
-                                        </div>
-                                        <div class="hover-content">
-                                            <div class="inner">
-                                                <h4>Men</h4>
-                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.
-                                                </p>
-                                                <div class="main-border-button">
-                                                    <a href="#">Discover More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <img src="assets/images/baner-right-image-02.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="right-first-image">
-                                    <div class="thumb">
-                                        <div class="inner-content">
-                                            <h4>Kids</h4>
-                                            <span>Best Clothes For Kids</span>
-                                        </div>
-                                        <div class="hover-content">
-                                            <div class="inner">
-                                                <h4>Kids</h4>
-                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.
-                                                </p>
-                                                <div class="main-border-button">
-                                                    <a href="#">Discover More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <img src="assets/images/baner-right-image-03.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="right-first-image">
-                                    <div class="thumb">
-                                        <div class="inner-content">
-                                            <h4>Accessories</h4>
-                                            <span>Best Trend Accessories</span>
-                                        </div>
-                                        <div class="hover-content">
-                                            <div class="inner">
-                                                <h4>Accessories</h4>
-                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.
-                                                </p>
-                                                <div class="main-border-button">
-                                                    <a href="#">Discover More</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <img src="assets/images/baner-right-image-04.jpg">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <img src="assets/images/banner2.jpg" class="d-block w-100" alt="">
                 </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="assets/images/banner3.jpg" class="d-block w-100" alt="">
+                </div>
+
             </div>
+
+            <!-- Tombol kiri bawah -->
+            <div class="banner-navigation">
+
+                <button class="banner-arrow" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+                    &#8592;
+                </button>
+
+                <button class="banner-arrow" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+                    &#8594;
+                </button>
+
+            </div>
+
+            <!-- Indicator kanan bawah -->
+            <div class="carousel-indicators custom-indicator">
+
+                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active"></button>
+
+                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1"></button>
+
+                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2"></button>
+
+            </div>
+
         </div>
     </div>
     <!-- ***** Main Banner Area End ***** -->
