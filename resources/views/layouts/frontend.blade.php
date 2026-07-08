@@ -73,8 +73,9 @@
                     </p>
 
                     <div class="map-responsive">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1994.2382394012652!2d102.14064936799058!3d1.4860172775940395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1783414099946!5m2!1sen!2sid" width="100%"
-                            height="220" style="border:0;" allowfullscreen="" loading="lazy">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1994.2382394012652!2d102.14064936799058!3d1.4860172775940395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1783414099946!5m2!1sen!2sid"
+                            width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy">
                         </iframe>
                     </div>
 
@@ -129,6 +130,32 @@
                 }, 500);
 
             });
+        });
+    </script>
+
+    <script>
+        $('.owl-men-item').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 2
+                },
+                768: {
+                    items: 2
+                },
+                992: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                }
+            }
         });
     </script>
 

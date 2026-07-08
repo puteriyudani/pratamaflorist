@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use App\Models\Kategori;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -16,6 +17,10 @@ class HomeController extends Controller
             }
         ])->orderBy('nama_kategori')->get();
 
-        return view('home', compact('kategoris'));
+        $banners = Banner::where('is_active', true)
+            ->orderBy('urutan')
+            ->get();
+
+        return view('home', compact('kategoris', 'banners'));
     }
 }

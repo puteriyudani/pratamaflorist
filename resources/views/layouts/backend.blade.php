@@ -125,6 +125,11 @@
             Kategori
         </a>
 
+        <a href="{{ route('banner.index') }}" class="{{ request()->routeIs('banner.*') ? 'active' : '' }}">
+            <i class="bi bi-images"></i>
+            Banner
+        </a>
+
     </div>
 
     <div class="content">

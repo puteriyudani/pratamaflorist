@@ -6,27 +6,70 @@
             width: 100px;
         }
 
-        .owl-men-item .thumb img {
-            width: 100%;
-            height: 380px;
-            object-fit: cover;
+        /* ===========================
+           BODY
+        =========================== */
+
+        body {
+            background:
+                radial-gradient(circle at 10% 15%, rgba(255, 192, 203, .18) 0 140px, transparent 141px),
+                radial-gradient(circle at 90% 10%, rgba(255, 228, 196, .20) 0 180px, transparent 181px),
+                radial-gradient(circle at 85% 85%, rgba(255, 182, 193, .15) 0 160px, transparent 161px),
+                radial-gradient(circle at 15% 90%, rgba(255, 240, 200, .18) 0 180px, transparent 181px),
+                linear-gradient(180deg, #fffdfd 0%, #fff8f6 45%, #fffdfb 100%);
+            overflow-x: hidden;
         }
 
-        .down-content span {
-            color: #28a745;
-            font-size: 20px;
-            font-weight: 700;
+
+        /* ===========================
+           NAVBAR
+        =========================== */
+
+        .header-area {
+            background: rgba(255, 255, 255, .92);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .06);
         }
+
+        .main-nav .nav li a {
+            transition: .3s;
+        }
+
+        .main-nav .nav li a:hover {
+            color: #b68a60 !important;
+        }
+
+
+        /* ===========================
+           BANNER
+        =========================== */
 
         .main-banner {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #bannerCarousel,
+        #bannerCarousel .carousel-inner,
+        #bannerCarousel .carousel-item {
+            width: 100%;
+        }
+
+        #bannerCarousel .carousel-item {
             position: relative;
         }
 
-        .carousel-item img {
+        #bannerCarousel .carousel-item img {
             width: 100%;
-            height: 700px;
+            height: clamp(250px, 40vw, 700px);
             object-fit: cover;
+            object-position: center;
         }
+
+
+        /* ===========================
+           BANNER CONTENT
+        =========================== */
 
         .banner-content {
             position: absolute;
@@ -35,67 +78,45 @@
             transform: translateY(-50%);
             color: #fff;
             max-width: 500px;
+            z-index: 5;
         }
 
         .banner-content h1 {
-            font-size: 52px;
+            font-size: 54px;
             font-weight: 700;
             margin-bottom: 20px;
         }
 
         .banner-content p {
             font-size: 18px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+            line-height: 1.8;
         }
 
         .btn-shop {
             display: inline-block;
-            padding: 12px 35px;
+            padding: 13px 35px;
+            border-radius: 40px;
+            text-decoration: none;
             background: #b68a60;
             color: #fff;
-            text-decoration: none;
-            border-radius: 40px;
             transition: .3s;
         }
 
         .btn-shop:hover {
-            background: #9c744d;
+            background: #9d7550;
             color: #fff;
         }
 
-        /* tombol kiri bawah */
 
-        .banner-navigation {
-            position: absolute;
-            left: 60px;
-            bottom: 35px;
-            z-index: 20;
-            display: flex;
-            gap: 15px;
-        }
-
-        .banner-arrow {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            border: 1px solid rgba(255, 255, 255, .6);
-            background: rgba(255, 255, 255, .15);
-            color: #fff;
-            font-size: 20px;
-            transition: .3s;
-        }
-
-        .banner-arrow:hover {
-            background: #fff;
-            color: #000;
-        }
-
-        /* indikator kanan bawah */
+        /* ===========================
+           INDICATOR
+        =========================== */
 
         .custom-indicator {
             justify-content: flex-end;
-            margin-right: 60px;
-            margin-bottom: 40px;
+            margin-right: 40px;
+            margin-bottom: 35px;
         }
 
         .custom-indicator button {
@@ -103,10 +124,163 @@
             height: 10px !important;
             border-radius: 50%;
             margin: 0 5px !important;
+            background: #fff;
+            opacity: .5;
         }
 
         .custom-indicator .active {
+            opacity: 1;
+        }
+
+
+        /* ===========================
+           PRODUK
+        =========================== */
+
+        .product-section {
+            padding: 80px 0;
+        }
+
+        .product-section:nth-child(even) {
+            background: rgba(255, 255, 255, .55);
+        }
+
+        .section-heading h2 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .owl-men-item .item {
             background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: .35s;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .05);
+        }
+
+        .owl-men-item .item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+        }
+
+        .owl-men-item .thumb {
+            overflow: hidden;
+        }
+
+        .owl-men-item .thumb img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            transition: .4s;
+        }
+
+        .owl-men-item .item:hover img {
+            transform: scale(1.05);
+        }
+
+        .down-content {
+            padding: 20px;
+        }
+
+        .down-content h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .down-content span {
+            color: #28a745;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+
+        /* ===========================
+           WA ICON
+        =========================== */
+
+        .hover-content ul li a {
+            background: #25D366 !important;
+            color: #fff !important;
+        }
+
+        .hover-content ul li a:hover {
+            background: #1da851 !important;
+        }
+
+
+        /* ===========================
+           SOCIAL
+        =========================== */
+
+        #social {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, .6);
+        }
+
+
+        /* ===========================
+           FOOTER
+        =========================== */
+
+        footer {
+            background: #36220b;
+            border-top: 1px solid #eee;
+        }
+
+
+        /* ===========================
+           MOBILE
+        =========================== */
+
+        @media (max-width: 991px) {
+            #bannerCarousel .carousel-item img {
+                height: auto;
+                object-fit: contain;
+            }
+
+            #bannerCarousel .carousel-item {
+                background: #fff;
+            }
+        }
+
+        @media(max-width:768px) {
+
+            .main-banner {
+                padding-top: 70px;
+            }
+
+            .banner-content {
+                left: 25px;
+                right: 25px;
+                max-width: 100%;
+            }
+
+            .banner-content h1 {
+                font-size: 32px;
+            }
+
+            .banner-content p {
+                font-size: 15px;
+            }
+
+            #bannerCarousel .carousel-item img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+            .custom-indicator {
+                margin-right: 15px;
+                margin-bottom: 15px;
+            }
+
+            .owl-men-item .thumb img {
+                height: 300px;
+            }
         }
     </style>
 @endsection
@@ -152,52 +326,49 @@
 @section('content')
     <!-- ***** Main Banner Area Start ***** -->
     <div class="main-banner">
+
         <div id="bannerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
 
             <div class="carousel-inner">
 
-                <!-- Slide 1 -->
-                <div class="carousel-item active">
-                    <img src="assets/images/banner1.jpg" class="d-block w-100" alt="">
-                </div>
+                @forelse($banners as $banner)
+                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
 
-                <!-- Slide 2 -->
-                <div class="carousel-item">
-                    <img src="assets/images/banner2.jpg" class="d-block w-100" alt="">
-                </div>
+                        <img src="{{ asset('storage/banner/' . $banner->image) }}" class="d-block w-100"
+                            alt="Banner {{ $loop->iteration }}">
 
-                <!-- Slide 3 -->
-                <div class="carousel-item">
-                    <img src="assets/images/banner3.jpg" class="d-block w-100" alt="">
-                </div>
+                    </div>
 
-            </div>
+                @empty
 
-            <!-- Tombol kiri bawah -->
-            <div class="banner-navigation">
+                    <div class="carousel-item active">
 
-                <button class="banner-arrow" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
-                    &#8592;
-                </button>
+                        <img src="https://placehold.co/1920x700?text=Belum+Ada+Banner" class="d-block w-100"
+                            alt="No Banner">
 
-                <button class="banner-arrow" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
-                    &#8594;
-                </button>
+                    </div>
+                @endforelse
 
             </div>
 
-            <!-- Indicator kanan bawah -->
-            <div class="carousel-indicators custom-indicator">
+            @if ($banners->count() > 1)
 
-                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active"></button>
+                <!-- Indicator -->
 
-                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1"></button>
+                <div class="carousel-indicators custom-indicator">
 
-                <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2"></button>
+                    @foreach ($banners as $banner)
+                        <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="{{ $loop->index }}"
+                            class="{{ $loop->first ? 'active' : '' }}">
+                        </button>
+                    @endforeach
 
-            </div>
+                </div>
+
+            @endif
 
         </div>
+
     </div>
     <!-- ***** Main Banner Area End ***** -->
 
@@ -206,7 +377,7 @@
         <section class="section product-section" id="kategori-{{ $kategori->id }}">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <div class="section-heading">
                             <h2>{{ $kategori->nama_kategori }}</h2>
                         </div>
@@ -264,17 +435,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-heading">
+                    <div class="section-heading text-center">
                         <h2>Social Media</h2>
                         <span>
                             <a href="https://www.instagram.com/papan_bunga_pratama_florist/" target="_blank">
                                 <i class="fa fa-instagram"></i> @papan_bunga_pratama_florist
-
                             </a>
                             <br>
                             <a href="https://www.instagram.com/selempang_pratama_bengkalis/" target="_blank">
                                 <i class="fa fa-instagram"></i> @selempang_pratama_bengkalis
-
                             </a>
                         </span>
                     </div>
@@ -307,8 +476,8 @@
                                     </div>
                                 </div>
                                 <div style="padding: 19% 0;"></div>
-                                <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg
-                                        width="50px" height="50px" viewBox="0 0 60 60" version="1.1"
+                                <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px"
+                                        height="50px" viewBox="0 0 60 60" version="1.1"
                                         xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                             <g transform="translate(-511.000000, -20.000000)" fill="#000000">
