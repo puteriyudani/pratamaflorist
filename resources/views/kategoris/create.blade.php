@@ -1,134 +1,77 @@
 @extends('layouts.backend')
 @section('title', 'Tambah Kategori - Pratama Florist Bengkalis')
-@section('sidebar')
-    <div class="sidebar">
-
-        <h4 class="text-center py-4">🌸 Pratama Florist</h4>
-
-        <a href="{{ route('dashboard') }}">
-            <i class="bi bi-flower1"></i>
-            Produk
-        </a>
-
-        <a href="{{ route('kategoris.index') }}" class="{{ request()->routeIs('kategoris.*') ? 'active' : '' }}">
-            <i class="bi bi-grid"></i>
-            Kategori
-        </a>
-
-    </div>
-@endsection
 @section('content')
-    <div class="content">
+    <div class="container-fluid p-4">
 
-        <nav class="navbar navbar-expand-lg bg-white">
-            <div class="dropdown ms-auto me-4">
+        <div class="card">
 
-                <a class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
+            <div class="card-header text-white">
 
-                    <i class="bi bi-person-circle"></i>
-
-                    Admin
-
-                </a>
-
-                <ul class="dropdown-menu dropdown-menu-end">
-
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            Profil
-                        </a>
-                    </li>
-
-                    <li>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button type="submit" class="dropdown-item text-danger">
-                                <i class="bi bi-box-arrow-right me-2"></i>
-                                Logout
-                            </button>
-                        </form>
-                    </li>
-
-                </ul>
+                Tambah Kategori
 
             </div>
-        </nav>
 
+            <div class="card-body">
 
-        <div class="container-fluid p-4">
+                @if (session('success'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="bi bi-check-circle-fill me-2"></i>
+                        {{ session('success') }}
 
-            <div class="card">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                @endif
 
-                <div class="card-header text-white">
+                @if (session('error'))
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <i class="bi bi-x-circle-fill me-2"></i>
+                        {{ session('error') }}
 
-                    Tambah Kategori
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                @endif
 
-                </div>
+                @if ($errors->any())
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
 
-                <div class="card-body">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                        <strong>Terdapat kesalahan:</strong>
 
-                    @if (session('success'))
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            <i class="bi bi-check-circle-fill me-2"></i>
-                            {{ session('success') }}
+                        <ul class="mb-0 mt-2">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
 
-                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                        </div>
-                    @endif
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                @endif
 
-                    @if (session('error'))
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                            <i class="bi bi-x-circle-fill me-2"></i>
-                            {{ session('error') }}
+                <form action="{{ route('kategoris.store') }}" method="POST">
 
-                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                        </div>
-                    @endif
+                    @csrf
 
-                    @if ($errors->any())
-                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <div class="mb-3">
 
-                            <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                            <strong>Terdapat kesalahan:</strong>
+                        <label>Nama Kategori</label>
 
-                            <ul class="mb-0 mt-2">
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
+                        <input type="text" name="nama_kategori" class="form-control" value="{{ old('nama_kategori') }}">
 
-                            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                        </div>
-                    @endif
+                    </div>
 
-                    <form action="{{ route('kategoris.store') }}" method="POST">
+                    <button class="btn btn-success">
 
-                        @csrf
+                        Simpan
 
-                        <div class="mb-3">
+                    </button>
 
-                            <label>Nama Kategori</label>
+                    <a href="{{ route('kategoris.index') }}" class="btn btn-secondary">
 
-                            <input type="text" name="nama_kategori" class="form-control"
-                                value="{{ old('nama_kategori') }}">
+                        Kembali
 
-                        </div>
+                    </a>
 
-                        <button class="btn btn-success">
-
-                            Simpan
-
-                        </button>
-
-                        <a href="{{ route('kategoris.index') }}" class="btn btn-secondary">
-
-                            Kembali
-
-                        </a>
-
-                    </form>
-
-                </div>
+                </form>
 
             </div>
 
