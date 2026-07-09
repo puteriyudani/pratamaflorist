@@ -34,6 +34,69 @@
             width: 100%;
             height: 220px;
         }
+
+        .floating-wa {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 20px;
+            border-radius: 50px;
+            background: #25D366;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .25);
+            z-index: 9999;
+            transition: all .3s ease;
+            animation: waPulse 2s infinite;
+        }
+
+        .floating-wa i {
+            font-size: 30px;
+        }
+
+        .floating-wa:hover {
+            background: #1ebe5d;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        @keyframes waPulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, .6);
+            }
+
+            70% {
+                box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        @media (max-width:768px) {
+            .floating-wa {
+                right: 18px;
+                bottom: 18px;
+                width: 60px;
+                height: 60px;
+                padding: 0;
+                justify-content: center;
+                border-radius: 50%;
+            }
+
+            .floating-wa span {
+                display: none;
+            }
+
+            .floating-wa i {
+                font-size: 32px;
+            }
+        }
     </style>
 </head>
 
@@ -93,6 +156,12 @@
         </div>
     </footer>
     <!-- ***** Footer End ***** -->
+
+    <a href="https://wa.me/6285386170847" class="floating-wa" target="_blank">
+
+        <i class="fa fa-whatsapp"></i>
+        <span>Chat Kami</span>
+    </a>
 
     <!-- jQuery -->
     <script src="{{ asset('assets/js/jquery-2.1.0.min.js') }}"></script>
